@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Database Results</title>
+    <style>
+        table {
+            width: 96%;
+            border-collapse: collapse;
+            margin: 0 2%;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: right;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+
+        .green-row {
+            background-color: #b0ffae;
+        }
+        .green-row:hover {
+            background-color: #d4fad4;
+        }
+        .green-row:hover .dark-cell-1-green,
+        .green-row:hover .dark-cell-2-green {
+            background-color: rgb(181, 225, 178);
+}
+
+        .dark-cell-1-green {
+            background-color: #8dd08c;
+        }
+        .dark-cell-2-green {
+            background-color: #8dd08c;
+        }
+
+        .red-row {
+            background-color: #ffb0b0;
+        }
+        .red-row:hover {
+            background-color: #fcc6c6;
+        }
+        .red-row:hover .dark-cell-1-red,
+        .red-row:hover .dark-cell-2-red {
+            background-color: rgb(247, 186, 186);
+}
+
+        .dark-cell-1-red {
+            background-color: #fb9999;
+        }
+
+        .dark-cell-2-red{
+            background-color: #fb9999;
+        }
+    </style>
+
+    <!-- include jQuery from a CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/static/main.js"></script>
+
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>EPLF 'Payments' Table</th>
+                <th>ZD 'Payments' Table</th>
+                <th>EPLF 'Log' Table</th>
+                <th>ZD 'Log' Table</th>
+                <th>ZD 'InvalidLog' Table</th>
+                <th>EPLF 'Log' Table (Validated rows)</th>
+                <th>ZD 'Log' (Validated rows)</th>
+            </tr>
+        </thead>
+        <tbody id="data-table">
+           <!-- <tr>
+           <td id="current_time">{{ current_time }}</td>
+                <td id="eplf_payment_all">{{ eplf_payment_all }}</td>
+                <td id="zd_payment_all">{{ zd_payment_all }}</td>
+                <td id="eplf_log_all">{{ eplf_log_all }}</td>
+                <td id="zd_log_all">{{ zd_log_all }}</td>
+                <td id="eplf_log_faulty">{{ eplf_log_faulty }}</td>
+                <td id="eplf_log_validated">{{ eplf_log_validated }}</td>
+                <td id="zd_log_validated">{{ zd_log_validated }}</td>
+            </tr> -->
+        </tbody>
+    </table>
+</body>
+</html>
