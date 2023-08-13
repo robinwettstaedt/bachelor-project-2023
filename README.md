@@ -89,6 +89,8 @@ Linux:
 
 ## How to start the simulated Environment (Windows)
 
+> The concepts are not supposed to run at the same time, as the containers share names, ports and IP adresses.
+
 1. Open the project in PowerShell.
 2. Change directories in the concept of choice:
 
@@ -116,7 +118,11 @@ The images will be built and the containers will start. This should take around 
 
 The logs of the containers can be easily viewed within Docker Desktop and the `interface` container will provide a web interface with a table overview of the current state of the databases on [localhost:5000](http://localhost:5000/).
 
+5. If you want to run the other concept afterwards, it is recommended to execute the `docker-stop.ps1` script beforehand:
 
+```
+.\docker-stop.ps1
+```
 <br>
 
 
@@ -141,6 +147,8 @@ Executes the 3 previous scripts in the order they are shown here.
 
 
 ## How to start the simulated Environment (Linux)
+
+> The concepts are not supposed to run at the same time, as the containers share names, ports and IP adresses.
 
 1. Open the project in your shell.
 2. Change directories in the concept of choice:
@@ -178,7 +186,11 @@ The images will be built and the containers will start. This should take around 
 
 The logs of the containers can be viewed via the `sudo docker logs <containername>` command and the `interface` container will provide a web interface with a table overview of the current state of the databases on [localhost:5000](http://localhost:5000/).
 
+6. If you want to run the other concept afterwards, it is recommended to execute the `docker-stop.ps1` script beforehand:
 
+```
+sudo ./docker-stop.sh
+```
 
 <br>
 
